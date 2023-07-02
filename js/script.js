@@ -84,7 +84,9 @@ GOOD LUCK 😀
 // };
 
 // const person = new personCl('Dilmurod Buyukov', 2003);
+// const Bekzod = new personCl('Bekzod Buyukov', 2001);
 // console.log(person);
+// console.log(Bekzod);
 // personCl.greet();
 // person.calcAge();
 
@@ -114,8 +116,6 @@ GOOD LUCK 😀
 // console.log(account);
 
 
-
-
 //------------------------ STATIC METHOD --------------------------//
 // const Person = function(firstName, birthYear) {
 //   this.firstName = firstName;
@@ -138,33 +138,34 @@ GOOD LUCK 😀
 
 
 //------------------------ Object.create() --------------------------//
-const PersonProto = {
-    calcAge() {
-        console.log(2023 - this.birthYear);
-    }
-};
+// const PersonProto = {
+//     calcAge() {
+//         console.log(2023 - this.birthYear);
+//     }
+// };
+// const steven = Object.create(PersonProto);
 
-const steven = Object.create(PersonProto);
-console.log(steven);
-steven.firstName = 'Dilmurod';
-steven.birthYear = 2003;
-steven.calcAge();
-//-------------------------------
+// console.log(steven);
+// steven.firstName = 'Dilmurod';
+// steven.birthYear = 2003;
+// steven.calcAge();
+// //-------------------------------
 
-//-------------------------------
+// //-------------------------------
 const PersonProto2 = {
     calcAge() {
         console.log(2023 - this.birthYear);
     },
 
-    init(firstName, birthYear) {
+    init(firstName, birthYear, email) {
         this.firstName = firstName;
         this.birthYear = birthYear;
+        this.email = email;
     }
 };
-
 const steven2 = Object.create(PersonProto2);
-steven2.init('Dilmurod', 2003);
+
+steven2.init('Dilmurod', 2003, 'DilmurodBuyukov@gmail.com');
 console.log(steven2);
 steven2.calcAge();
 
