@@ -415,54 +415,54 @@ GOOD LUCK 😀
 
 
 //--------------------- ENCAPSULATION: PRIVATE CLASS FIELDS AND METHODS --------------------//
-class Account {
-    // PUBLIC FIELDS
-    local = navigator.language;
+// class Account {
+//     // PUBLIC FIELDS
+//     local = navigator.language;
 
-    //PRIVATE FIELD
-    #movements = [];
-    #pin;
+//     //PRIVATE FIELD
+//     #movements = [];
+//     #pin;
 
 
-    constructor(owner, currency, pin) {
-        this.owner = owner;
-        this.currency = currency;
-        this.#pin = pin;
+//     constructor(owner, currency, pin) {
+//         this.owner = owner;
+//         this.currency = currency;
+//         this.#pin = pin;
 
-        console.log(`Thanks for opening an  account ${this.owner}`);
+//         console.log(`Thanks for opening an  account ${this.owner}`);
 
-    } 
+//     } 
 
-    deposite(val) {
-        this.#movements.push(val)
-        return this
-    }
+//     deposite(val) {
+//         this.#movements.push(val)
+//         return this
+//     }
 
-    withdrawal(val) {
-        this.#movements.push(-val)
-    }
+//     withdrawal(val) {
+//         this.#movements.push(-val)
+//     }
 
-    #approveLoan(val) {
-        return true
-    }
+//     #approveLoan(val) {
+//         return true
+//     }
 
-    requestLoan(val) {
-        if(this.#approveLoan(val)) {
-            this.#movements.push(val)
-        }
-    }
+//     requestLoan(val) {
+//         if(this.#approveLoan(val)) {
+//             this.#movements.push(val)
+//         }
+//     }
 
-    getMovements() {
-        return this.#movements
-    }
-}
+//     getMovements() {
+//         return this.#movements
+//     }
+// }
 
-const acc1 = new Account("Jonas", "EUR", 1111,);
+// const acc1 = new Account("Jonas", "EUR", 1111,);
 
-acc1.deposite(300).deposite(200).withdrawal(100) // deposite chaining bo'lishi uchun class ichidagi deposite ichiga return this qilishimiz kerak Agar withdrawalga ham chaining qilmoqchi bo'lsak unga ham return this qilishimiz kerak
+// acc1.deposite(300).deposite(200).withdrawal(100) // deposite chaining bo'lishi uchun class ichidagi deposite ichiga return this qilishimiz kerak Agar withdrawalga ham chaining qilmoqchi bo'lsak unga ham return this qilishimiz kerak
 
-// console.log(acc1.#movements);
-console.log(acc1.getMovements());
+// // console.log(acc1.#movements);
+// console.log(acc1.getMovements());
 
 /*
 Coding Challenge #4
