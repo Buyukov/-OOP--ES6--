@@ -180,10 +180,12 @@ GOOD LUCK 😀
 //     }
 // };
 // const steven = Object.create(PersonProto);
+// const Dilmurod  = Object.create(PersonProto);
 
 // console.log(steven);
-// steven.firstName = 'Dilmurod';
-// steven.birthYear = 2003;
+// console.log(Dilmurod);
+// steven.firstName = 'Steven';
+// steven.birthYear = 1997;
 // steven.calcAge();
 // //-------------------------------
 
@@ -255,8 +257,8 @@ GOOD LUCK😃
 // };
 
 // const Student = function(firstName, birthYear, course) {
-// //    this.firstName = firstName;
-// //    this.birthYear = birthYear;
+// //    this.firstName = firstName; // canceled
+// //    this.birthYear = birthYear; // candeled
 
 // Person.call(this, firstName, birthYear); // Agar bir xil qiymatlar ishlatilayotgan bo'lsa shu qiymatlarni boshqa bir joydan call qilib chaqirsak bo'ladi.
 //    this.course = course;
@@ -267,7 +269,7 @@ GOOD LUCK😃
 // const mike = new Student('Mike', 1993, 'Computer Science');
 // console.log(mike);
 // mike.calcAge();
-
+ 
 
 // console.log(mike instanceof Student); // instanceof shu asosida paydo qilingan degani, Misol uchun mike Student classi asosida yasalgan
 
@@ -290,7 +292,7 @@ Test data:
 § Data car 1: 'Tesla' going at 120 km/h, with a charge of 23%
 GOOD LUCK 😀
 */
-
+        
 
 
 //----------------------------- INHERITANCE BETWEEN CLASSES: ES6 CLASSES -------------------------------//
@@ -320,7 +322,7 @@ GOOD LUCK 😀
 //         else alert(`${name} is not a full name`)
 //     };
 // }; 
-
+ 
 // class StudentCl extends personCl {
 //     constructor(fullName, birthYear, course){
 //         super(fullName, birthYear) // super() Parent classni constructorini ishga tushurib beradi va super()ni ichiga parent class constructorini orgumentlarini kirgizib qo'yishimiz kerak
@@ -422,10 +424,10 @@ GOOD LUCK 😀
 //     //PRIVATE FIELD
 //     #movements = [];
 //     #pin;
-
+//     #owner
 
 //     constructor(owner, currency, pin) {
-//         this.owner = owner;
+//         this.#owner = owner;
 //         this.currency = currency;
 //         this.#pin = pin;
 
@@ -463,6 +465,8 @@ GOOD LUCK 😀
 
 // // console.log(acc1.#movements);
 // console.log(acc1.getMovements());
+// console.log(acc1.owner);
+
 
 /*
 Coding Challenge #4
